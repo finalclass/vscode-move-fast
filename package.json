@@ -2,7 +2,7 @@
 	"name": "move-fast",
 	"displayName": "move-fast",
 	"description": "Move up and down by 5 lines with ctrl+up and ctrl+down",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"publisher": "selbh",
 	"license": "ISC",
 	"engines": {
@@ -13,7 +13,9 @@
 	],
 	"activationEvents": [
 		"onCommand:moveFast.up",
-		"onCommand:moveFast.down"
+		"onCommand:moveFast.down",
+		"onCommand:moveFast.upSelect",
+		"onCommand:moveFast.downSelect"
 	],
 	"main": "./out/src/move-fast",
 	"contributes": {
@@ -25,6 +27,40 @@
 			{
 				"command": "moveFast.down",
 				"title": "Move fast down"
+			},
+			{
+				"command": "moveFast.upSelect",
+				"title": "Move fast up and select"
+			},
+			{
+				"command": "moveFast.downSelect",
+				"title": "Move fast down and select"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "moveFast.up",
+				"key": "ctrl+up",
+				"mac": "ctrl+up",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "moveFast.down",
+				"key": "ctrl+down",
+				"mac": "ctrl+down",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "moveFast.upSelect",
+				"key": "ctrl+shift+up",
+				"mac": "ctrl+shift+up",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "moveFast.downSelect",
+				"key": "ctrl+shift+down",
+				"mac": "ctrl+shift+down",
+				"when": "editorTextFocus"
 			}
 		]
 	},
