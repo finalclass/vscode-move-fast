@@ -1,9 +1,10 @@
 {
 	"name": "move-fast",
 	"displayName": "move-fast",
-	"description": "Move up and down fast by 5 lines with ctrl+up and ctrl+down",
-	"version": "0.0.1",
+	"description": "Move up and down by 5 lines with ctrl+up and ctrl+down",
+	"version": "0.0.0",
 	"publisher": "selbh",
+	"license": "ISC",
 	"engines": {
 		"vscode": "^0.10.1"
 	},
@@ -11,14 +12,21 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.sayHello"
+		"onCommand:moveFast.up",
+		"onCommand:moveFast.down"
 	],
-	"main": "./out/src/extension",
+	"main": "./out/src/move-fast",
 	"contributes": {
-		"commands": [{
-			"command": "extension.sayHello",
-			"title": "Hello World"
-		}]
+		"commands": [
+			{
+				"command": "moveFast.up",
+				"title": "Move fast up"
+			},
+			{
+				"command": "moveFast.down",
+				"title": "Move fast down"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
